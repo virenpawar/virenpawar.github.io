@@ -14,7 +14,7 @@ function cors() {
       document.getElementById("demo").innerHTML = alert(this.responseText);
     }
   };
-  xhttp.open("OPTIONS", "https://serviceability.paytm.com/v2/checkavailability/?channel=web&child_site_id=6&site_id=2&version=2&code=382424", true);
+  xhttp.open("GET", "https://serviceability.paytm.com/v2/checkavailability/?channel=web&child_site_id=6&site_id=2&version=2&code=382424", true);
   xhttp.withCredentials = true;
   xhttp.send();
 }
