@@ -26,7 +26,7 @@ function cors() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = alert(this.responseText);
+      document.getElementById("demo2").innerHTML = alert(this.responseText);
     }
   };
   xhttp.open("GET", "https://middleware.paytmmall.com/saregama-carvaan-sc03-portable-digital-music-player-gold-CMPLXCOMSAREGAMA-CARDIGI5402779B9E28C6-pdp?channel=web&child_site_id=6&site_id=2&version=2&product_id=147190150&src=search-grid&use_mw=1&tracker=organic%7C6455%7Ccarvaan%7Cgrid%7CSearch%7C%7C2%7Cproduction&pincode=382424&address_pincode=382424", true);
